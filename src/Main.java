@@ -17,15 +17,14 @@ public class Main {
 //7. В том же методе main изменить год публикации одной из книг с помощью сеттера.
 
     public static void main(String[] args) {
-        Book Academy = new Book("Academy", 1966, "Isaak Asimov");
-        Academy.setPublishYear(1970);
-        System.out.println("Название книги = " + Academy.getBookName());
-        System.out.println("Год издания = " + Academy.getPublishYear());
-        System.out.println("Автор книги = " + Academy.getBookAuthor());
+        var author = new Author("Isaak", "Asimov");
+        var book = new Book("Academy", 1966, author);
+        var author1 = new Author("Robert", "Heinlein");
+        var book1 = new Book("Starship Troopers", 1957, author1);
+        book1.setPublishYear(1960);
+        System.out.println(book);
+        System.out.println(book1);
+            }
 
-        Book StarshipTroopers = new Book("Starship Troopers", 1959, "Robert Heinlein");
-        StarshipTroopers.setPublishYear(1965);
-        Author RobertHeinlein = new Author("Robert Heinlein");
-        System.out.println(StarshipTroopers.getBookName() + "; " + StarshipTroopers.getPublishYear() + "; " + RobertHeinlein.getNameAuthor());
-    }
+
 }
